@@ -1,0 +1,21 @@
+---
+alwaysApply: true
+---
+<functionality>
+- This app is a search tool for users to find Star Wars comic panels, to use in memes, social media responses, etc.
+- The app has a home page, [page.js](mdc:app/page.js) which has its own hooks and components.
+- The app has an admin page, [page.js](mdc:app/comics/page.js), which also has its own hooks and components.
+  - The admin page uses facets from search to retrieve values, additional API calls should not be necessary.
+- Both sides of this app must always function as designed.
+</functionality>
+
+<tech>
+- This app is create using AWS Amplify Gen2, Gen1 references do not work in this repo.
+- I am using Typesense Cloud for search
+  - I will perform all changes to the index when needed, please advise when needed.
+</tech>
+
+<learn>
+See [AGENTS.md](mdc:AGENTS.md) for additional learnings you must consider.
+As you interact with the user and the app, if you end up being wrong and are corrected, learn more about the context of the app and its purpose, or learn anything else that would help you in the future, please write it to @AGENTS.md.
+</learn>

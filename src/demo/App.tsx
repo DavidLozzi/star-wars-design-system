@@ -12,10 +12,10 @@ import {
   faStar, 
   faHeart, 
   faArrowRight,
-  faJedi,
-  faSith,
-  faRebel,
-  faEmpire
+  faUser,
+  faUserTie,
+  faFlag,
+  faCrown
 } from '@fortawesome/free-solid-svg-icons';
 
 const DemoApp = () => {
@@ -70,28 +70,28 @@ const DemoApp = () => {
           <Button 
             onClick={() => setTheme('jedi')} 
             variant={themeName === 'jedi' ? 'primary' : 'secondary'}
-            icon={faJedi}
+            icon={faUser}
           >
             Jedi
           </Button>
           <Button 
             onClick={() => setTheme('sith')} 
             variant={themeName === 'sith' ? 'primary' : 'secondary'}
-            icon={faSith}
+            icon={faUserTie}
           >
             Sith
           </Button>
           <Button 
             onClick={() => setTheme('rebel')} 
             variant={themeName === 'rebel' ? 'primary' : 'secondary'}
-            icon={faRebel}
+            icon={faFlag}
           >
             Rebel
           </Button>
           <Button 
             onClick={() => setTheme('empire')} 
             variant={themeName === 'empire' ? 'primary' : 'secondary'}
-            icon={faEmpire}
+            icon={faCrown}
           >
             Empire
           </Button>

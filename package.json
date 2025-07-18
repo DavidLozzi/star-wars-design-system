@@ -11,8 +11,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build -o docs",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint src --ext .ts,.tsx",
@@ -71,7 +71,7 @@
     "rollup": "^3.25.0",
     "rollup-plugin-dts": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-terser": "^7.0.2",
+    "@rollup/plugin-terser": "^0.4.0",
     "storybook": "^7.0.0",
     "typescript": "^5.1.0"
   },

@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { LightsaberProgress } from './LightsaberProgress';
 import { ThemeProvider } from '../../themes/ThemeProvider';
@@ -83,4 +84,39 @@ export const AllSizes: Story = {
       </div>
     </div>
   ),
+};
+
+export const AllThemes: Story = {
+  render: (args) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
+      <div>
+        <h3>Jedi Theme</h3>
+        <ThemeProvider initialTheme="jedi">
+          <LightsaberProgress {...args} />
+        </ThemeProvider>
+      </div>
+      <div>
+        <h3>Sith Theme</h3>
+        <ThemeProvider initialTheme="sith">
+          <LightsaberProgress {...args} />
+        </ThemeProvider>
+      </div>
+      <div>
+        <h3>Rebel Theme</h3>
+        <ThemeProvider initialTheme="rebel">
+          <LightsaberProgress {...args} />
+        </ThemeProvider>
+      </div>
+      <div>
+        <h3>Empire Theme</h3>
+        <ThemeProvider initialTheme="empire">
+          <LightsaberProgress {...args} />
+        </ThemeProvider>
+      </div>
+    </div>
+  ),
+  args: {
+    progress: 75,
+    size: 'medium',
+  },
 };

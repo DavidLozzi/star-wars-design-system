@@ -133,7 +133,7 @@ const ToggleIcon = styled.div<{ checked: boolean; size: string; theme: any }>`
       }
     }};
     border-radius: 50%;
-    animation: ${props.checked ? rotate : 'none'} 0.5s ease-in-out;
+    animation: ${props => props.checked ? rotate : 'none'} 0.5s ease-in-out;
   }
 `;
 

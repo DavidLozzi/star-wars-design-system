@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { useTheme } from '../../themes/ThemeProvider';
 
 interface LightsaberProgressProps {
   progress: number; // 0-100
@@ -59,7 +58,7 @@ const LightsaberHandle = styled.div<{ size: string }>`
   z-index: 2;
 `;
 
-const LaserBeam = styled.div<{ progress: number; size: string; theme: any }>`
+const LaserBeam = styled.div<{ progress: number; size: string }>`
   position: absolute;
   left: ${props => {
     switch (props.size) {
@@ -71,11 +70,7 @@ const LaserBeam = styled.div<{ progress: number; size: string; theme: any }>`
   top: 0;
   height: 100%;
   width: ${props => props.progress}%;
-  background: linear-gradient(90deg, 
-    ${props => props.theme.colors.primary} 0%, 
-    ${props => props.theme.colors.secondary} 50%, 
-    ${props => props.theme.colors.accent} 100%
-  );
+  background: ${props => props.theme.colors.primary};
   animation: ${laserGlow} 2s ease-in-out infinite;
   transition: width 0.5s ease-in-out;
   
@@ -86,7 +81,7 @@ const LaserBeam = styled.div<{ progress: number; size: string; theme: any }>`
     top: 0;
     width: 4px;
     height: 100%;
-    background: ${props => props.theme.colors.accent};
+    background: ${props => props.theme.colors.primary};
     animation: ${laserMove} 1s ease-in-out infinite;
   }
 `;
@@ -115,8 +110,6 @@ export const LightsaberProgress: React.FC<LightsaberProgressProps> = ({
   size = 'medium',
   className
 }) => {
-  const { theme } = useTheme();
-  
   // Ensure progress is between 0 and 100
   const clampedProgress = Math.max(0, Math.min(100, progress));
 
@@ -126,9 +119,8 @@ export const LightsaberProgress: React.FC<LightsaberProgressProps> = ({
       <LaserBeam 
         progress={clampedProgress} 
         size={size} 
-        theme={theme}
       />
-      <ProgressText size={size} theme={theme}>
+      <ProgressText size={size}>
         {Math.round(clampedProgress)}%
       </ProgressText>
     </LightsaberContainer>
