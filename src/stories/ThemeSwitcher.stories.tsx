@@ -1,7 +1,8 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeProvider, useTheme } from '../themes/ThemeProvider';
 import { Button } from '../components/Button/Button';
-import { faJedi, faSith, faRebel, faEmpire } from '@fortawesome/free-solid-svg-icons';
+import { faJedi, faLightbulb, faShieldAlt, faCrown } from '@fortawesome/free-solid-svg-icons';
 
 const ThemeSwitcher = () => {
   const { theme, themeName, setTheme } = useTheme();
@@ -15,7 +16,7 @@ const ThemeSwitcher = () => {
       fontFamily: theme.typography.fontFamily
     }}>
       <h1 style={{ color: theme.colors.primary, marginBottom: '2rem' }}>
-        Star Wars Design System - {themeName.toUpperCase()} Theme
+        Star Wars Design System - {theme.name} Theme
       </h1>
       
       <div style={{ marginBottom: '2rem' }}>
@@ -26,28 +27,28 @@ const ThemeSwitcher = () => {
             variant={themeName === 'jedi' ? 'primary' : 'secondary'}
             icon={faJedi}
           >
-            Jedi Theme
+            Jedi
           </Button>
           <Button 
             onClick={() => setTheme('sith')} 
             variant={themeName === 'sith' ? 'primary' : 'secondary'}
-            icon={faSith}
+            icon={faLightbulb}
           >
-            Sith Theme
+            Sith
           </Button>
           <Button 
             onClick={() => setTheme('rebel')} 
             variant={themeName === 'rebel' ? 'primary' : 'secondary'}
-            icon={faRebel}
+            icon={faShieldAlt}
           >
-            Rebel Theme
+            Rebels
           </Button>
           <Button 
             onClick={() => setTheme('empire')} 
             variant={themeName === 'empire' ? 'primary' : 'secondary'}
-            icon={faEmpire}
+            icon={faCrown}
           >
-            Empire Theme
+            Empire
           </Button>
         </div>
       </div>

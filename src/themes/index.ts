@@ -67,18 +67,18 @@ export interface Theme {
 
 // Sith Theme - Dark, brutalist with reds and oranges
 export const sithTheme: Theme = {
-  name: 'sith',
+  name: 'Sith',
   isDark: true,
   colors: {
-    primary: '#8B0000', // Dark red
-    secondary: '#FF4500', // Orange red
-    accent: '#FF6347', // Tomato
+    primary: '#FF4444', // Brighter red for better visibility
+    secondary: '#FF6B35', // Brighter orange red
+    accent: '#FF8A65', // Lighter tomato
     background: '#000000', // Pure black
     surface: '#1a1a1a', // Very dark gray
     text: '#FFFFFF', // White
-    textSecondary: '#CCCCCC', // Light gray
+    textSecondary: '#F0F0F0', // Even lighter gray for better readability
     border: '#333333', // Dark gray
-    shadow: 'rgba(139, 0, 0, 0.3)', // Dark red shadow
+    shadow: 'rgba(255, 68, 68, 0.3)', // Brighter red shadow
     success: '#00FF00', // Bright green
     warning: '#FFA500', // Orange
     error: '#FF0000', // Bright red
@@ -93,7 +93,7 @@ export const sithTheme: Theme = {
     xxl: '3rem',
   },
   typography: {
-    fontFamily: 'Comic Sans MS, cursive',
+    fontFamily: 'Unica One, cursive',
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -125,7 +125,7 @@ export const sithTheme: Theme = {
 
 // Jedi Theme - Light, clean with blues and beiges
 export const jediTheme: Theme = {
-  name: 'jedi',
+  name: 'Jedi',
   isDark: false,
   colors: {
     primary: '#1E90FF', // Dodger blue
@@ -151,7 +151,7 @@ export const jediTheme: Theme = {
     xxl: '3rem',
   },
   typography: {
-    fontFamily: 'Comic Sans MS, cursive',
+    fontFamily: 'Orbitron, monospace',
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -183,7 +183,7 @@ export const jediTheme: Theme = {
 
 // Rebel Theme - Light with oranges and blues, clean lines
 export const rebelTheme: Theme = {
-  name: 'rebel',
+  name: 'Rebels',
   isDark: false,
   colors: {
     primary: '#FF8C00', // Dark orange
@@ -209,7 +209,7 @@ export const rebelTheme: Theme = {
     xxl: '3rem',
   },
   typography: {
-    fontFamily: 'Comic Sans MS, cursive',
+    fontFamily: 'Bebas Neue, sans-serif',
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -241,18 +241,18 @@ export const rebelTheme: Theme = {
 
 // Empire Theme - Dark with grays and blues
 export const empireTheme: Theme = {
-  name: 'empire',
+  name: 'Empire',
   isDark: true,
   colors: {
-    primary: '#2F4F4F', // Dark slate gray
-    secondary: '#4682B4', // Steel blue
-    accent: '#708090', // Slate gray
+    primary: '#5A7A8A', // Lighter slate gray for better visibility
+    secondary: '#6B9BC4', // Lighter steel blue
+    accent: '#8FA3B8', // Lighter slate gray
     background: '#000000', // Black
     surface: '#1C1C1C', // Dark gray
     text: '#FFFFFF', // White
-    textSecondary: '#B0B0B0', // Light gray
+    textSecondary: '#F0F0F0', // Even lighter gray for better readability
     border: '#404040', // Dark gray
-    shadow: 'rgba(47, 79, 79, 0.3)', // Dark slate shadow
+    shadow: 'rgba(90, 122, 138, 0.3)', // Lighter slate shadow
     success: '#00FF00', // Bright green
     warning: '#FFD700', // Gold
     error: '#FF0000', // Bright red
@@ -267,7 +267,7 @@ export const empireTheme: Theme = {
     xxl: '3rem',
   },
   typography: {
-    fontFamily: 'Comic Sans MS, cursive',
+    fontFamily: 'Anton, sans-serif',
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',

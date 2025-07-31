@@ -7,6 +7,7 @@ import { OnScreenKeyboard } from '../components/OnScreenKeyboard/OnScreenKeyboar
 import { LightsaberLoading } from '../components/LoadingAnimations/LightsaberLoading';
 import { R2D2Loading } from '../components/LoadingAnimations/R2D2Loading';
 import { LightspeedLoading } from '../components/LoadingAnimations/LightspeedLoading';
+import { createGlobalStyle } from 'styled-components';
 import { 
   faLightbulb, 
   faStar, 
@@ -17,6 +18,13 @@ import {
   faFlag,
   faCrown
 } from '@fortawesome/free-solid-svg-icons';
+
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+`;
 
 const DemoApp = () => {
   const { theme, themeName, setTheme } = useTheme();
@@ -231,6 +239,7 @@ const DemoApp = () => {
 const App = () => {
   return (
     <ThemeProvider initialTheme="jedi">
+      <GlobalStyle />
       <DemoApp />
     </ThemeProvider>
   );

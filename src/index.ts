@@ -8,6 +8,7 @@ export { LightsaberProgress } from './components/LightsaberProgress/LightsaberPr
 export { Toggle } from './components/Toggle/Toggle';
 export { OnScreenKeyboard } from './components/OnScreenKeyboard/OnScreenKeyboard';
 export { Button } from './components/Button/Button';
+export { Navigation } from './components/Navigation/Navigation';
 
 // Loading animations
 export { LightsaberLoading } from './components/LoadingAnimations/LightsaberLoading';
